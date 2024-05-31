@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,14 +13,21 @@ import 'package:task_track_app/generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final dir = await getApplicationDocumentsDirectory();
-  Hive
-    ..init(dir.path)
-    ..registerAdapter(TaskHiveAdapter());
-  final taskBox = await Hive.openBox<TaskHive>('task');
-  initDi(taskBox);
-  runApp(const MyApp());
+  runZonedGuarded(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
+      final dir = await getApplicationDocumentsDirectory();
+      Hive
+        ..init(dir.path)
+        ..registerAdapter(TaskHiveAdapter());
+      final taskBox = await Hive.openBox<TaskHive>('task');
+      initDi(taskBox);
+      runApp(const MyApp());
+    },
+    (error, stack) {
+      debugPrint('$stack');
+    },
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -30,6 +39,7 @@ class MyApp extends StatelessWidget {
       create: (context) =>
           getIt<TaskController>()..add(const TaskEvent.getTask()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,

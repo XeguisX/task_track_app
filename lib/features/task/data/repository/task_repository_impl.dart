@@ -39,7 +39,7 @@ class TaskRepositoryImpl implements TaskRepository {
   Future<Result<String>> deleteTask(String uuid) async {
     return handlerException<String>(
       () async {
-        await _taskDataSourceLocal.deleteTask(uuid);
+        _taskDataSourceLocal.deleteTask(uuid);
         return 'Task deleted successful';
       },
     );

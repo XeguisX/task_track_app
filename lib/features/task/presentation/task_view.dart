@@ -130,9 +130,7 @@ class _TaskViewState extends State<TaskView> {
                   size: UISizing.value_32,
                   color: UIColor.primary,
                 ),
-                onPressed: () {
-                  context.read<TaskController>().add(const TaskEvent.getTask());
-                },
+                onPressed: () {},
               ),
             ],
           ),

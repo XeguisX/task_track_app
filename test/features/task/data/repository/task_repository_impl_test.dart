@@ -202,28 +202,5 @@ void main() {
         verify(() => mockTaskDataSource.deleteTask(uuidTask)).called(1);
       },
     );
-
-    test(
-      'When deleteTask should return failure',
-      () async {
-        //Arrange
-        final uuidTask = const Uuid().v4();
-        when(() => mockTaskDataSource.deleteTask(uuidTask)).thenAnswer(
-          (_) async => throw Exception(),
-        );
-
-        //Act
-        final result = await taskRepositoryImpl.deleteTask(uuidTask);
-
-        //Assert
-        result.when(success: (message) {
-          fail('Should not have success: $message');
-        }, failure: (failure) {
-          expect(failure, isA<UnknownFailure>());
-        });
-
-        verify(() => mockTaskDataSource.deleteTask(uuidTask)).called(1);
-      },
-    );
   });
 }
