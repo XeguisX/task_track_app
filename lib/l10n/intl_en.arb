@@ -1,3 +1,13 @@
 {
-    "title": "Task Trak App"
+    "title": "Task Trak App",
+    "subtitle": "My Tasks",
+    "completed": "Completed",
+    "pending": "Pending",
+    "addNewTask": "Add New Task",
+    "name": "Name",
+    "pleaseInsertName": "Please, insert name",
+    "pleaseInsertDescription": "Please, insert description",
+    "description": "Description",
+    "close": "Close",
+    "save": "Save"
 }
