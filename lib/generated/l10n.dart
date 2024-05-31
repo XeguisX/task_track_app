@@ -59,6 +59,106 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `My Tasks`
+  String get subtitle {
+    return Intl.message(
+      'My Tasks',
+      name: 'subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Completed`
+  String get completed {
+    return Intl.message(
+      'Completed',
+      name: 'completed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pending`
+  String get pending {
+    return Intl.message(
+      'Pending',
+      name: 'pending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add New Task`
+  String get addNewTask {
+    return Intl.message(
+      'Add New Task',
+      name: 'addNewTask',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, insert name`
+  String get pleaseInsertName {
+    return Intl.message(
+      'Please, insert name',
+      name: 'pleaseInsertName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, insert description`
+  String get pleaseInsertDescription {
+    return Intl.message(
+      'Please, insert description',
+      name: 'pleaseInsertDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

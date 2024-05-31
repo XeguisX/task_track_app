@@ -22,6 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addNewTask": MessageLookupByLibrary.simpleMessage("Add New Task"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "completed": MessageLookupByLibrary.simpleMessage("Completed"),
+        "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "pending": MessageLookupByLibrary.simpleMessage("Pending"),
+        "pleaseInsertDescription":
+            MessageLookupByLibrary.simpleMessage("Please, insert description"),
+        "pleaseInsertName":
+            MessageLookupByLibrary.simpleMessage("Please, insert name"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "subtitle": MessageLookupByLibrary.simpleMessage("My Tasks"),
         "title": MessageLookupByLibrary.simpleMessage("Task Trak App")
       };
 }
