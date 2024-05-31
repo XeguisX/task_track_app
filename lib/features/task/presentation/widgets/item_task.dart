@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_track_app/features/task/domain/models/task.dart';
 import 'package:task_track_app/features/task/domain/models/task_status.dart';
 import 'package:task_track_app/features/task/presentation/controller/task_controller.dart';
+import 'package:task_track_app/generated/l10n.dart';
 import 'package:task_track_app/shared/widgets/ui/padding.dart';
 import 'package:task_track_app/shared/widgets/ui/sizing.dart';
 
@@ -57,7 +58,9 @@ class ItemTask extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(
-            task.status == TaskStatus.completed ? 'Completed' : 'Pending',
+            task.status == TaskStatus.completed
+                ? AppLocalizations.of(context).completed
+                : AppLocalizations.of(context).pending,
             style: const TextStyle(
               color: Colors.white,
               fontSize: UISizing.value_12,
