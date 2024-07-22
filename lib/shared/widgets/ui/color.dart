@@ -8,7 +8,7 @@ class UIColor {
   static Color backgroundIconDashboard =
       const Color.fromARGB(224, 237, 236, 236);
   static Color icon = const Color.fromARGB(244, 143, 146, 161);
-
+//colors
   static List<Color> kDefaultRainbowColors = const [
     Colors.red,
     Colors.orange,
