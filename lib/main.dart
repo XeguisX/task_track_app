@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
-        ],
+        ],// test
         theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme,
